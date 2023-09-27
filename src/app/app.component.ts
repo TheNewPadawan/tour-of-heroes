@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'tour-of';
-
-  constructor() {
-    this.title += '-heroes';
-  }
+  title: string = 'Tour of Heroes';
 }
