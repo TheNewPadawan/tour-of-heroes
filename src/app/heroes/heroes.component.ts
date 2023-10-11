@@ -22,6 +22,13 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes() //return Observable di Hero[]
+            .subscribe( //Imposta una funzione per quando arriva un Hero[]
+                    res/*: Hero[]*/ => {
+                      this.heroes = res;
+    });
+    /*this.heroService.getHeroes().subscribe(res => {
+      this.heroes = res;
+    });*/
   }
 }
